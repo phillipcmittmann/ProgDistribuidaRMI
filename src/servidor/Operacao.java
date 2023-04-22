@@ -4,8 +4,9 @@ public class Operacao {
 	int operacao;
 	String resposta;
 	String conteudo;
+	int numOperacao;
 	
-	public Operacao(int operacao, String conteudo) {
+	public Operacao(int numOperacao, int operacao, String conteudo) {
 		 if (operacao < 0 || operacao > 1) {
             System.err.println("Exceção no construtor de Operacao.");
             throw new IllegalArgumentException("O valor de operacao deve ser 0 (leitura) ou 1 (escrita).");
@@ -18,6 +19,4 @@ public class Operacao {
 		 this.operacao = operacao;
 		 this.conteudo = conteudo;
 	}
-	
-	
 }

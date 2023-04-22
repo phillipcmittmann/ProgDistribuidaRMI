@@ -12,10 +12,11 @@ public class Servidor {
 	
 	public static void main(String args[]) {
 		try {
-			LocateRegistry.createRegistry(20000);
-			Naming.rebind("rmi://localhost:20000/request", null);
+			Servidor servidor = new Servidor();
 			
-//			InterfaceRequisicao interface = new 
+			LocateRegistry.createRegistry(20000);
+			InterfaceRequisicao interfaceRequisicao = new RemoteRequisicao(servidor);
+			Naming.rebind("rmi://localhost:20000/request", interfaceRequisicao);
 			
 			System.out.println("Servidor rodando na porta 20000.");
 		}
