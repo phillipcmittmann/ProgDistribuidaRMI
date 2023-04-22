@@ -8,5 +8,5 @@ public interface InterfaceRequisicao extends Remote {
 	ArrayList<Thread> listaClientes = null;
 	Servidor servidor = null;
 	
-	public String requisicao(int cliente, int p, String conteudo) throws RemoteException;
+	public String requisicao(String id, int p, String conteudo) throws RemoteException;
 }

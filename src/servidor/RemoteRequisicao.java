@@ -15,7 +15,7 @@ public class RemoteRequisicao extends UnicastRemoteObject implements InterfaceRe
 		this.qtdOperacoes = 0;
 	}
 
-	public String requisicao(int cliente, int tipoOperacao, String conteudo) throws RemoteException {
+	public String requisicao(String cliente, int tipoOperacao, String conteudo) throws RemoteException {
 		try {
 			Operacao operacao = new Operacao(qtdOperacoes+1, tipoOperacao, conteudo);
 			
